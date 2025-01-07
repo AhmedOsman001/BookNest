@@ -1,6 +1,9 @@
 # users/serializers.py
 from rest_framework import serializers
 from dj_rest_auth.registration.serializers import RegisterSerializer
+from dj_rest_auth.serializers import LoginSerializer
+from allauth.account.adapter import get_adapter
+from django.utils.translation import gettext_lazy as _
 
 class CustomRegisterSerializer(RegisterSerializer):
     # Remove fields we don't want
@@ -31,11 +34,6 @@ class CustomRegisterSerializer(RegisterSerializer):
         pass  # You can add additional signup steps here if needed
     
     
-# serializers.py
-from dj_rest_auth.serializers import LoginSerializer
-from rest_framework import serializers
-from allauth.account.adapter import get_adapter
-from django.utils.translation import gettext_lazy as _
 
 
 class CustomLoginSerializer(LoginSerializer):
