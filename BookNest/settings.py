@@ -16,6 +16,32 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import os
+
+# Base directory of your project
+BASE_DIR_STATIC = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Media files configuration
+MEDIA_URL = '/media/'  # This is the URL path where your media will be served from
+MEDIA_ROOT = os.path.join(BASE_DIR_STATIC, 'media')  # This is where files will be stored on your server
+
+# Ensure Django handles large file uploads properly
+DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880  # 5MB in bytes
+FILE_UPLOAD_MAX_MEMORY_SIZE = 5242880  # 5MB in bytes
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+# Cloudinary Configuration
+cloudinary.config(
+    cloud_name = "dvrr5avgu",
+    api_key = "356272421526754",
+    api_secret = "VHwlkIReWSq1qICSWfR4nLvAj8I"
+)
+
+# Media Storage Configuration
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -48,6 +74,8 @@ INSTALLED_APPS = [
     "allauth.socialaccount",  
     "dj_rest_auth",
     "dj_rest_auth.registration",
+    'cloudinary_storage',
+    'cloudinary',
     "corsheaders",
     'users',
 ]

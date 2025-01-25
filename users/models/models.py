@@ -19,10 +19,10 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(username, email, password, **extra_fields)
 
 class CustomUser(AbstractUser):
-    birth_date = models.DateField(null=True, blank=True, default='2000-01-01', verbose_name='Birth Date',  help_text='Enter your birth date')
     objects = CustomUserManager()
-
     def delete(self, *args, **kwargs):
         # Delete associated tokens
         OutstandingToken.objects.filter(user=self).delete()
         super().delete(*args, **kwargs)
+    def __str__(self):
+        return self.S

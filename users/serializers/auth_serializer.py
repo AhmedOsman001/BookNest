@@ -15,14 +15,12 @@ class CustomRegisterSerializer(RegisterSerializer):
     email = serializers.EmailField(required=True)
     password1 = serializers.CharField(write_only=True)
     password2 = serializers.CharField(write_only=True)
-    birth_date = serializers.DateField(required=True)
     def get_cleaned_data(self):
         return {
             'username': self.validated_data.get('username', ''),
             'email': self.validated_data.get('email', ''),
             'password1': self.validated_data.get('password1', ''),
             'password2': self.validated_data.get('password2', ''),
-            'birth_date': self.validated_data.get('birth_date', ''),
         }
     
     def validate(self, data):
