@@ -1,0 +1,138 @@
+ERROR 2025-05-15 21:26:58,933 apps 40548 20628 Error initializing recommendation engine: cannot import name 'ensure_recommendation_engine_in_path' from 'recommendation.utils' (A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\utils.py)
+ERROR 2025-05-15 21:28:18,281 apps 16628 31984 Error initializing recommendation engine: cannot import name 'ensure_recommendation_engine_in_path' from 'recommendation.utils' (A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\utils.py)
+ERROR 2025-05-15 21:28:29,649 apps 20932 41008 Error initializing recommendation engine: cannot import name 'ensure_recommendation_engine_in_path' from 'recommendation.utils' (A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\utils.py)
+ERROR 2025-05-15 21:29:16,400 apps 13680 29380 Error initializing recommendation engine: cannot import name 'ensure_recommendation_engine_in_path' from 'recommendation.utils' (A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\utils.py)
+ERROR 2025-05-15 21:29:47,149 apps 33488 37560 Error initializing recommendation engine: cannot import name 'ensure_recommendation_engine_in_path' from 'recommendation.utils' (A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\utils.py)
+INFO 2025-05-15 21:29:48,551 services 33488 37560 Starting training of svd recommendation model
+INFO 2025-05-15 21:29:48,907 recommendation_engine 33488 37560 RecommendationEngine initialized with model type: SVD
+INFO 2025-05-15 21:29:48,908 recommendation_engine 33488 37560 Starting model training process...
+INFO 2025-05-15 21:29:48,908 recommendation_engine 33488 37560 Filtering users with less than 5 ratings.
+INFO 2025-05-15 21:29:48,910 recommendation_engine 33488 37560 Users before filtering: 4. Users after filtering: 4. Ratings remaining: 2008
+INFO 2025-05-15 21:29:48,911 recommendation_engine 33488 37560 Creating Surprise Dataset with scale (1, 5).
+INFO 2025-05-15 21:29:48,926 recommendation_engine 33488 37560 Splitting data into training and testing sets.
+INFO 2025-05-15 21:29:48,951 recommendation_engine 33488 37560 Training SVD model...
+INFO 2025-05-15 21:29:48,974 recommendation_engine 33488 37560 Model training complete.
+INFO 2025-05-15 21:29:48,974 recommendation_engine 33488 37560 Evaluating model on the test set...
+INFO 2025-05-15 21:29:48,976 recommendation_engine 33488 37560 Evaluation - RMSE: 1.2631, MAE: 1.0832
+ERROR 2025-05-15 21:29:48,977 services 33488 37560 Model training failed
+INFO 2025-05-15 21:33:22,204 utils 25192 24936 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-15 21:33:31,538 utils 34992 37936 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-15 21:33:31,776 utils 14272 19772 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-15 21:33:32,855 services 34992 37936 Starting training of svd recommendation model
+INFO 2025-05-15 21:33:33,059 recommendation_engine 34992 37936 RecommendationEngine initialized with model type: SVD
+INFO 2025-05-15 21:33:33,059 recommendation_engine 34992 37936 Starting model training process...
+INFO 2025-05-15 21:33:33,059 recommendation_engine 34992 37936 Filtering users with less than 5 ratings.
+INFO 2025-05-15 21:33:33,061 recommendation_engine 34992 37936 Users before filtering: 4. Users after filtering: 4. Ratings remaining: 2008
+INFO 2025-05-15 21:33:33,061 recommendation_engine 34992 37936 Creating Surprise Dataset with scale (1, 5).
+INFO 2025-05-15 21:33:33,065 recommendation_engine 34992 37936 Splitting data into training and testing sets.
+INFO 2025-05-15 21:33:33,071 recommendation_engine 34992 37936 Training SVD model...
+INFO 2025-05-15 21:33:33,100 recommendation_engine 34992 37936 Model training complete.
+INFO 2025-05-15 21:33:33,100 recommendation_engine 34992 37936 Evaluating model on the test set...
+INFO 2025-05-15 21:33:33,104 recommendation_engine 34992 37936 Evaluation - RMSE: 1.2631, MAE: 1.0832
+ERROR 2025-05-15 21:33:33,108 services 34992 37936 Model training failed
+INFO 2025-05-15 21:41:12,806 utils 31332 14804 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-15 21:41:13,810 utils 34044 13352 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-15 21:41:15,006 services 34044 13352 Starting training of svd recommendation model
+INFO 2025-05-15 21:41:15,174 recommendation_engine 34044 13352 RecommendationEngine initialized with model type: SVD
+INFO 2025-05-15 21:41:15,174 recommendation_engine 34044 13352 Starting model training process...
+INFO 2025-05-15 21:41:15,174 recommendation_engine 34044 13352 Filtering users with less than 5 ratings.
+INFO 2025-05-15 21:41:15,177 recommendation_engine 34044 13352 Users before filtering: 4. Users after filtering: 4. Ratings remaining: 2008
+INFO 2025-05-15 21:41:15,177 recommendation_engine 34044 13352 Creating Surprise Dataset with scale (1, 5).
+INFO 2025-05-15 21:41:15,180 recommendation_engine 34044 13352 Splitting data into training and testing sets.
+INFO 2025-05-15 21:41:15,184 recommendation_engine 34044 13352 Training SVD model...
+INFO 2025-05-15 21:41:15,207 recommendation_engine 34044 13352 Model training complete.
+INFO 2025-05-15 21:41:15,207 recommendation_engine 34044 13352 Evaluating model on the test set...
+INFO 2025-05-15 21:41:15,209 recommendation_engine 34044 13352 Evaluation - RMSE: 1.2631, MAE: 1.0832
+INFO 2025-05-15 21:41:15,243 services 34044 13352 Successfully trained and saved svd model with id 1
+INFO 2025-05-16 18:37:02,351 utils 7784 19928 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 18:37:07,698 services 7784 19928 Starting training of svd recommendation model
+INFO 2025-05-16 18:37:08,007 recommendation_engine 7784 19928 RecommendationEngine initialized with model type: SVD
+INFO 2025-05-16 18:37:08,012 recommendation_engine 7784 19928 Starting model training process...
+INFO 2025-05-16 18:37:08,014 recommendation_engine 7784 19928 Filtering users with less than 5 ratings.
+INFO 2025-05-16 18:37:08,031 recommendation_engine 7784 19928 Users before filtering: 4. Users after filtering: 4. Ratings remaining: 2008
+INFO 2025-05-16 18:37:08,031 recommendation_engine 7784 19928 Creating Surprise Dataset with scale (1, 5).
+INFO 2025-05-16 18:37:08,042 recommendation_engine 7784 19928 Splitting data into training and testing sets.
+INFO 2025-05-16 18:37:08,051 recommendation_engine 7784 19928 Training SVD model...
+INFO 2025-05-16 18:37:08,102 recommendation_engine 7784 19928 Model training complete.
+INFO 2025-05-16 18:37:08,108 recommendation_engine 7784 19928 Evaluating model on the test set...
+INFO 2025-05-16 18:37:08,116 recommendation_engine 7784 19928 Evaluation - RMSE: 1.2631, MAE: 1.0832
+INFO 2025-05-16 18:37:08,152 services 7784 19928 Successfully trained and saved svd model with id 2
+INFO 2025-05-16 18:37:28,078 utils 41224 41008 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 18:37:29,830 services 41224 41008 Starting training of knn recommendation model
+INFO 2025-05-16 18:37:30,036 recommendation_engine 41224 41008 RecommendationEngine initialized with model type: KNN
+INFO 2025-05-16 18:37:30,036 recommendation_engine 41224 41008 Starting model training process...
+INFO 2025-05-16 18:37:30,036 recommendation_engine 41224 41008 Filtering users with less than 5 ratings.
+INFO 2025-05-16 18:37:30,038 recommendation_engine 41224 41008 Users before filtering: 4. Users after filtering: 4. Ratings remaining: 2008
+INFO 2025-05-16 18:37:30,039 recommendation_engine 41224 41008 Creating Surprise Dataset with scale (1, 5).
+INFO 2025-05-16 18:37:30,042 recommendation_engine 41224 41008 Splitting data into training and testing sets.
+INFO 2025-05-16 18:37:30,050 recommendation_engine 41224 41008 Training KNN model...
+INFO 2025-05-16 18:37:30,064 recommendation_engine 41224 41008 Model training complete.
+INFO 2025-05-16 18:37:30,064 recommendation_engine 41224 41008 Evaluating model on the test set...
+INFO 2025-05-16 18:37:30,068 recommendation_engine 41224 41008 Evaluation - RMSE: 1.2629, MAE: 1.0808
+INFO 2025-05-16 18:37:30,088 services 41224 41008 Successfully trained and saved knn model with id 3
+INFO 2025-05-16 18:39:32,281 utils 19564 16524 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 18:39:54,789 utils 20624 33676 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 18:47:50,101 utils 16524 32636 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 18:47:53,687 utils 36740 10792 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 18:49:14,814 recommendation_engine 36740 30716 Generating 10 recommendations for user_id '4'.
+INFO 2025-05-16 18:49:14,832 recommendation_engine 36740 30716 Successfully generated 10 recommendations for user '4'.
+INFO 2025-05-16 18:49:14,903 services 36740 30716 Generated 10 recommendations for user 4
+INFO 2025-05-16 18:50:10,010 recommendation_engine 36740 30716 Generating 10 recommendations for user_id '4'.
+INFO 2025-05-16 18:50:10,044 recommendation_engine 36740 30716 Successfully generated 10 recommendations for user '4'.
+INFO 2025-05-16 18:50:10,092 services 36740 30716 Generated 10 recommendations for user 4
+INFO 2025-05-16 18:51:05,173 recommendation_engine 36740 30716 Generating 10 recommendations for user_id '4'.
+INFO 2025-05-16 18:51:05,195 recommendation_engine 36740 30716 Successfully generated 10 recommendations for user '4'.
+INFO 2025-05-16 18:51:05,263 services 36740 30716 Generated 10 recommendations for user 4
+INFO 2025-05-16 19:23:00,761 utils 13940 23564 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 19:23:28,532 utils 14048 22056 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 19:23:43,081 utils 41832 6552 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 19:30:32,940 utils 36508 42092 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 19:48:30,165 utils 39640 40816 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 19:49:07,488 utils 22220 26440 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 19:49:49,425 utils 42316 37188 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 19:51:22,428 utils 41368 37876 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendations\engine
+INFO 2025-05-16 19:58:10,369 utils 40852 12412 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\engine
+INFO 2025-05-16 20:08:52,678 utils 10368 12380 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\engine
+INFO 2025-05-16 20:11:39,222 utils 32116 12632 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\engine
+INFO 2025-05-16 20:11:43,996 utils 16864 17112 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\engine
+INFO 2025-05-16 20:13:45,466 utils 22736 28760 Added recommendation engine path to sys.path: A:\web django\GradProject\New folder\BookNest\BookNest\recommendation\engine
+INFO 2025-05-16 20:16:10,789 apps 4728 19272 RecommendationsConfig ready method called.
+INFO 2025-05-16 20:18:20,879 apps 42032 42844 RecommendationsConfig ready method called.
+INFO 2025-05-16 20:18:23,816 apps 21228 15780 RecommendationsConfig ready method called.
+INFO 2025-05-16 20:21:05,898 apps 14128 35904 RecommendationsConfig ready method called.
+INFO 2025-05-16 20:22:18,879 signals 14128 16172 User testnumber2 (ID: 15) has reached 20 ratings. Generating recommendations.
+ERROR 2025-05-16 20:22:23,104 signals 14128 16172 Failed to trigger recommendations for user 15: [WinError 10061] No connection could be made because the target machine actively refused it
+INFO 2025-05-16 20:22:23,117 recommendation_engine 14128 16172 Generating 15 recommendations for user_id '15'.
+WARNING 2025-05-16 20:22:23,117 recommendation_engine 14128 16172 User_id '15' not found in the training set (after filtering). Cannot generate recommendations with current model context.
+INFO 2025-05-16 20:22:23,117 services 14128 16172 No recommendations generated for user 15
+INFO 2025-05-16 20:22:23,119 signals 14128 16172 Generated 0 recommendations for user 15 synchronously.
+INFO 2025-05-16 20:25:14,094 apps 33804 37472 RecommendationsConfig ready method called.
+INFO 2025-05-16 20:25:23,274 apps 35616 20044 RecommendationsConfig ready method called.
+INFO 2025-05-16 20:25:55,864 signals 35616 40772 User testnumber2 (ID: 15) has reached 21 ratings. Generating recommendations.
+ERROR 2025-05-16 20:26:00,079 signals 35616 40772 Failed to trigger recommendations for user 15: [WinError 10061] No connection could be made because the target machine actively refused it
+INFO 2025-05-16 20:26:00,088 recommendation_engine 35616 40772 Generating 15 recommendations for user_id '15'.
+WARNING 2025-05-16 20:26:00,089 recommendation_engine 35616 40772 User_id '15' not found in the training set (after filtering). Cannot generate recommendations with current model context.
+INFO 2025-05-16 20:26:00,089 services 35616 40772 No recommendations generated for user 15
+INFO 2025-05-16 20:26:00,090 signals 35616 40772 Generated 0 recommendations for user 15 synchronously.
+INFO 2025-05-17 18:54:49,628 apps 47556 47596 RecommendationsConfig ready method called.
+INFO 2025-05-17 18:54:56,457 apps 37772 43312 RecommendationsConfig ready method called.
+INFO 2025-05-17 18:55:51,470 signals 37772 49240 User testnumber2 (ID: 15) has reached 22 ratings. Generating recommendations.
+INFO 2025-05-17 18:55:51,471 signals 37772 49240 Training new recommendation model to include user 15's ratings
+INFO 2025-05-17 18:55:51,471 services 37772 49240 Starting training of svd recommendation model
+INFO 2025-05-17 18:55:51,781 recommendation_engine 37772 49240 RecommendationEngine initialized with model type: SVD
+INFO 2025-05-17 18:55:51,785 recommendation_engine 37772 49240 Starting model training process...
+INFO 2025-05-17 18:55:51,785 recommendation_engine 37772 49240 Filtering users with less than 5 ratings.
+INFO 2025-05-17 18:55:51,797 recommendation_engine 37772 49240 Users before filtering: 15. Users after filtering: 15. Ratings remaining: 2130
+INFO 2025-05-17 18:55:51,797 recommendation_engine 37772 49240 Creating Surprise Dataset with scale (1, 5).
+INFO 2025-05-17 18:55:51,806 recommendation_engine 37772 49240 Splitting data into training and testing sets.
+INFO 2025-05-17 18:55:51,811 recommendation_engine 37772 49240 Training SVD model...
+INFO 2025-05-17 18:55:51,843 recommendation_engine 37772 49240 Model training complete.
+INFO 2025-05-17 18:55:51,844 recommendation_engine 37772 49240 Evaluating model on the test set...
+INFO 2025-05-17 18:55:51,847 recommendation_engine 37772 49240 Evaluation - RMSE: 1.2850, MAE: 1.1032
+INFO 2025-05-17 18:55:51,866 services 37772 49240 Successfully trained and saved svd model with id 4
+INFO 2025-05-17 18:55:51,867 signals 37772 49240 Successfully trained new model (ID: 4) including user 15's data
+ERROR 2025-05-17 18:55:56,097 signals 37772 49240 Failed to trigger async recommendations for user 15: [WinError 10061] No connection could be made because the target machine actively refused it
+INFO 2025-05-17 18:55:56,113 recommendation_engine 37772 49240 Generating 10 recommendations for user_id '15'.
+INFO 2025-05-17 18:55:56,125 recommendation_engine 37772 49240 Successfully generated 10 recommendations for user '15'.
+INFO 2025-05-17 18:55:56,146 services 37772 49240 Generated 10 recommendations for user 15
+INFO 2025-05-17 18:55:56,147 signals 37772 49240 Generated 10 recommendations for user 15 synchronously.

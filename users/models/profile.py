@@ -24,7 +24,7 @@ class Profile(models.Model):
     ]
 
     # One-to-one relationship with User model
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
+    user = models.OneToOneField('users.CustomUser', on_delete=models.CASCADE, related_name='profile')
     profile_pic = CloudinaryField(
         'image', 
         max_length=500,

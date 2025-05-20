@@ -25,4 +25,4 @@ class CustomUser(AbstractUser):
         OutstandingToken.objects.filter(user=self).delete()
         super().delete(*args, **kwargs)
     def __str__(self):
-        return self.S
+        return self.username

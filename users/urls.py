@@ -14,6 +14,7 @@ router.register('profile', ProfileViewSet, basename='profile')
 
 
 urlpatterns = [
+    # Authentication End Points
     path("register/", CustomRegisterView.as_view(), name="custom_register"),
     path("login/", CustomLoginView.as_view(), name="rest_login"),
     path("logout/", LogoutView.as_view(), name="rest_logout"),

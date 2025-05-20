@@ -52,7 +52,14 @@ SECRET_KEY = 'django-insecure-#ej51h&fkjahb42qb2o^k&vxt8a50q8=0fqm__z_!ebp!8=(3v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Security settings for development
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'http')
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+
+# Update ALLOWED_HOSTS for local development
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -78,6 +85,13 @@ INSTALLED_APPS = [
     'cloudinary',
     "corsheaders",
     'users',
+    'books',
+    'follows',
+    'notifications',
+    'drf_spectacular',
+    'django_elasticsearch_dsl',
+    'recommendation.apps.RecommendationsConfig',
+
 ]
 
 SIMPLE_JWT = {
@@ -91,9 +105,13 @@ SIMPLE_JWT = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 
 REST_AUTH = {
@@ -112,6 +130,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'BookNest.urls'
@@ -140,12 +159,12 @@ WSGI_APPLICATION = 'BookNest.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'booknestdb',  # Your database name
-        'USER': 'postgres',  # Your database username
-        'PASSWORD': 'Actor@2000',  # Your database password
-        'HOST': 'localhost',  # Or use '127.0.0.1'
-        'PORT': '5432',  # Default PostgreSQL port
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'booknestdb4',  
+        'USER': 'postgres',  
+        'PASSWORD': 'Actor@2000', 
+        'HOST': 'localhost', 
+        'PORT': '5432',  
     }
 }
 
@@ -181,6 +200,20 @@ USE_I18N = True
 USE_TZ = True
 
 
+# Elasticsearch Configuration
+# ELASTICSEARCH_DSL = {
+#     'default': {
+#         'hosts': 'localhost:9200',
+#         # 'http_auth': ('elastic', 'your_password_here')
+#     },
+# }
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'http://127.0.0.1:9200',
+    },
+}
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
@@ -205,6 +238,51 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {asctime} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'django_debug.log',  # Will be created in your project root
+            'formatter': 'verbose',
+        },
+        'recommendation_file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'recommendation.log',  # Will be created in your project root
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'recommendation': {
+            'handlers': ['console', 'recommendation_file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
 
 if DEBUG:
     CORS_ALLOW_ALL_ORIGINS = True
@@ -212,4 +290,29 @@ else:
     CORS_ALLOWED_ORIGINS = [
         "http://localhost:3000/",
         "http://127.0.0.1:3000/",
+        "http://localhost:5500/",
+        'http://elasticsearch:9200',
+        'http://127.0.0.1:9200'
     ]
+    
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_COOKIE_SAMESITE = 'None'
+CSRF_COOKIE_SECURE = False  # This only works if you're using https
+SESSION_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SECURE = False
+    
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'BookNest API',
+    'DESCRIPTION': 'API documentation for BookNest application',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SWAGGER_UI_SETTINGS': {
+        'deepLinking': True,
+        'persistAuthorization': True,
+    },
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SERVE_PUBLIC': True,
+    'SCHEMA_PATH_PREFIX': r'/api/v1/',
+}

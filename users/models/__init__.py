@@ -1,2 +1,2 @@
-from .models import CustomUser
+from .models import *
 from .profile import *
